@@ -88,3 +88,33 @@ Benefits:
 Centralized Storage: Easily manage and store Docker images in one place.
 Versioning: Registries keep track of image versions, making it easy to manage updates.
 Collaboration: Public registries allow users to share images with the global developer community, while private ones facilitate collaboration within organizations.
+
+
+
+
+
+
+## Steps & Command to run:
+
+Install Docker Desktop
+Sign in to Dockerhub and Docker Desktop
+Docker Desktop:
+	Check docker install: cli -> “docker”
+	Pull the hello-world image and run it
+
+Assure that you’re logged in: docker login
+
+Build docker image: docker build -t mlops-docker-demo .
+
+Run the container: docker run -p 5000:5000 mlops-docker-demo
+
+Tag your image: docker tag mlops-docker-demo <user_name>/mlops-docker-demo:<tag_name>
+
+Push image to dockerhub: docker push <user_name>/mlops-docker-demo:<tag_name>
+
+Pull image from dockerhub: docker pull <user_name>/mlops-docker-demo:<tag_name>
+
+Run the Pulled image: docker run -p 5000:5000 <user_name>/mlops-docker-demo:<tag_name>
+
+
+
